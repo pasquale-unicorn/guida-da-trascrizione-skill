@@ -12,7 +12,8 @@ La skill guida Claude a **fare le domande giuste prima di partire**, a procedere
 ## Installazione
 
 ```sh
-git clone <questo-repo>
+git clone https://github.com/pasquale-unicorn/guida-da-trascrizione-skill.git
+cd guida-da-trascrizione-skill
 cp -R guida-da-trascrizione ~/.claude/skills/
 ```
 
