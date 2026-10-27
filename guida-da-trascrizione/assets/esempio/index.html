@@ -1,0 +1,441 @@
+<!doctype html>
+<!-- ESEMPIO dal progetto reale "manuale affitti brevi": mostra tutti i componenti di stile.css
+     (copertina, indice, apertura di parte, capitolo, diagrammi SVG, foto, box, checklist, tabelle).
+     I testi sono del caso d'esempio: in un progetto nuovo si tengono le strutture, non le parole. -->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esempio componenti — manuale operativo</title>
+<link rel="stylesheet" href="../montserrat-embedded.css">
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+
+<!-- Sprite: punta di freccia condivisa da tutti i diagrammi (id dg-punta) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <marker id="dg-punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z"/></marker>
+</defs></svg>
+
+<!-- ================= 1 · COPERTINA ================= -->
+<section class="copertina">
+  <img class="copertina-logo" src="../logo-unicorn-bianco.png" alt="Unicorn">
+  <div class="copertina-tag">Manuale operativo per corsisti</div>
+  <h1>Affitti brevi<br>a prova<br>di ospite</h1>
+  <p class="copertina-sotto">Dalla casa da sistemare al primo check-in: cantiere, impianti e gestione, passo per passo</p>
+  <figure>
+    <svg viewBox="0 0 680 350" role="img" aria-label="Cantiere, impianti e gestione: le tre parti del percorso">
+      <path d="M80 155L340 15L600 155V330H80Z" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+      <path d="M150 220H530" stroke="#67e8f9" stroke-width="3"/>
+      <circle cx="150" cy="220" r="47" fill="#3b0764" stroke="#67e8f9" stroke-width="2"/>
+      <g transform="translate(126 196)" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3L15 13L24 16L31 11L27 3A13 13 0 0 1 35 25L47 38L39 46L26 33A13 13 0 0 1 5 13L12 20L20 17L19 9Z"/></g>
+      <text x="150" y="300" text-anchor="middle">cantiere</text>
+      <circle cx="340" cy="220" r="47" fill="#3b0764" stroke="#67e8f9" stroke-width="2"/>
+      <g transform="translate(316 196)" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M28 3L10 28H24L19 46L39 20H25Z"/></g>
+      <text x="340" y="300" text-anchor="middle">impianti</text>
+      <circle cx="530" cy="220" r="47" fill="#3b0764" stroke="#67e8f9" stroke-width="2"/>
+      <g transform="translate(506 196)" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M21 24A12 12 0 1 1 29 16L46 33V41H38V35H32Z"/></g>
+      <text x="530" y="300" text-anchor="middle">gestione</text>
+    </svg>
+  </figure>
+</section>
+
+<!-- ================= 2 · INDICE ================= -->
+<section class="indice">
+  <p class="occhiello">Il manuale</p>
+  <h1>Indice</h1>
+
+  <div class="indice-parte">
+    <div class="indice-titolo"><span class="indice-num">1</span><h2>Parte 1 — Strategia</h2><span class="guida"></span><span class="pag">7</span></div>
+    <div class="indice-riga"><span>1.1 Scegliere come gestire: proprietario, rent to rent, property management</span><span class="guida"></span><span class="pag">8</span></div>
+    <div class="indice-riga"><span>1.2 Casa intera o affittacamere</span><span class="guida"></span><span class="pag">12</span></div>
+    <div class="indice-riga"><span>1.3 Calcolare il rendimento reale prima di comprare</span><span class="guida"></span><span class="pag">15</span></div>
+    <div class="indice-riga"><span>1.4 Le voci che cambiano sempre: notaio e tassi</span><span class="guida"></span><span class="pag">19</span></div>
+  </div>
+
+  <div class="indice-parte">
+    <div class="indice-titolo"><span class="indice-num">2</span><h2>Parte 2 — Ristrutturazione e allestimento</h2><span class="guida"></span><span class="pag">23</span></div>
+    <div class="indice-riga"><span>2.1 Non è casa tua: i quattro criteri</span><span class="guida"></span><span class="pag">24</span></div>
+    <div class="indice-riga"><span>2.2 I tre livelli di intervento</span><span class="guida"></span><span class="pag">28</span></div>
+    <div class="indice-riga"><span>2.3 Bagno, cucina, camera: cosa conta per l'ospite</span><span class="guida"></span><span class="pag">32</span></div>
+    <div class="indice-riga"><span>2.4 Dotazioni che fanno la differenza</span><span class="guida"></span><span class="pag">40</span></div>
+    <div class="indice-riga"><span>2.5 Biancheria, scorte e deposito</span><span class="guida"></span><span class="pag">45</span></div>
+  </div>
+
+  <div class="indice-parte in-evidenza">
+    <div class="indice-titolo"><span class="indice-num">3</span><h2>Parte 3 — Cantiere e impianti</h2><span class="guida"></span><span class="pag">49</span></div>
+    <div class="indice-riga"><span>3.1 Il sopralluogo: le 10 cose da guardare</span><span class="guida"></span><span class="pag">52</span></div>
+    <div class="indice-riga"><span>3.2 Impianto elettrico dal contatore alle camere</span><span class="guida"></span><span class="pag">56</span></div>
+    <div class="indice-riga"><span>3.3 Impianto idrico, scarichi e riscaldamento</span><span class="guida"></span><span class="pag">62</span></div>
+    <div class="indice-riga"><span>3.4 Umidità: risalita, infiltrazione, condensa</span><span class="guida"></span><span class="pag">70</span></div>
+    <div class="indice-riga"><span>3.5 Sicurezza obbligatoria</span><span class="guida"></span><span class="pag">76</span></div>
+    <div class="indice-riga"><span>3.6 Accesso smart e piano B</span><span class="guida"></span><span class="pag">80</span></div>
+    <div class="indice-riga"><span>3.7 Manutenzione e consegna del cantiere</span><span class="guida"></span><span class="pag">86</span></div>
+  </div>
+
+  <div class="indice-parte">
+    <div class="indice-titolo"><span class="indice-num">4</span><h2>Parte 4 — Gestione operativa</h2><span class="guida"></span><span class="pag">91</span></div>
+    <div class="indice-riga"><span>4.1 Il percorso dell'ospite</span><span class="guida"></span><span class="pag">92</span></div>
+    <div class="indice-riga"><span>4.2 Identificare l'ospite prima del codice</span><span class="guida"></span><span class="pag">98</span></div>
+    <div class="indice-riga"><span>4.3 Il manuale della casa</span><span class="guida"></span><span class="pag">102</span></div>
+    <div class="indice-riga"><span>4.4 Recensioni: prevenire, chiedere, rispondere</span><span class="guida"></span><span class="pag">106</span></div>
+    <div class="indice-riga"><span>4.5 Kross Booking: cosa fa e come organizzarsi</span><span class="guida"></span><span class="pag">111</span></div>
+    <div class="indice-riga"><span>4.6 Property management: rendiconto al proprietario</span><span class="guida"></span><span class="pag">118</span></div>
+  </div>
+</section>
+
+<!-- ================= 3 · APERTURA PARTE 3 ================= -->
+<section class="apertura">
+  <p class="occhiello">Parte</p>
+  <div class="apertura-numero">3</div>
+  <h1>Cantiere e impianti</h1>
+  <p class="apertura-riga">La casa regge cento check-in all'anno solo se gli impianti sono sicuri, leggibili e facili da riparare.</p>
+
+  <div class="apertura-icone">
+    <svg viewBox="0 0 640 116" role="img" aria-label="I tre impianti: elettrico, idrico, riscaldamento">
+      <circle class="dg-cerchio-icona" cx="107" cy="38" r="36"/>
+      <g transform="translate(83 14) scale(1.0)" class="dg-icona" style="stroke-width:1.6"><path d="M28 3L10 28H24L19 46L39 20H25Z"/></g>
+      <text x="107" y="106" text-anchor="middle">Elettrico</text>
+      <circle class="dg-cerchio-icona" cx="320" cy="38" r="36"/>
+      <g transform="translate(296 14) scale(1.0)" class="dg-icona" style="stroke-width:1.6"><path d="M24 4C24 4 10 20 10 30A14 14 0 0 0 38 30C38 20 24 4 24 4Z"/></g>
+      <text x="320" y="106" text-anchor="middle">Idrico</text>
+      <circle class="dg-cerchio-icona" cx="533" cy="38" r="36"/>
+      <g transform="translate(509 14) scale(1.0)" class="dg-icona" style="stroke-width:1.6"><path d="M24 4C26 14 38 20 38 31A14 14 0 0 1 10 31C10 24 14 19 18 15C18 21 20 24 24 26C22 18 22 10 24 4Z"/></g>
+      <text x="533" y="106" text-anchor="middle">Riscaldamento</text>
+    </svg>
+  </div>
+
+  <h2>Cosa impari</h2>
+  <ul class="elenco-punti">
+    <li>A guardare una casa con gli occhi di chi la gestisce.</li>
+    <li>A riconoscere i tre impianti: elettrico, idrico, riscaldamento.</li>
+    <li>A fare un sopralluogo con una lista, non a memoria.</li>
+    <li>A decidere cosa sistemare subito, cosa proporre al proprietario e cosa lasciare.</li>
+    <li>A preparare l'accesso dell'ospite con un piano B.</li>
+  </ul>
+
+  <section class="perche">
+    <h2>Perché conta</h2>
+    <ul>
+      <li>L'ospite cambia ogni 2–3 giorni. Ogni guasto blocca una prenotazione.</li>
+      <li>Un guasto nascosto costa più di un guasto visibile.</li>
+      <li>Un impianto che capisci lo ripari in fretta. Uno che non capisci lo paghi due volte.</li>
+    </ul>
+  </section>
+
+  <blockquote class="citazione">«L'errore più costoso è quello di ristrutturare la casa pensandola come se fosse casa vostra.»</blockquote>
+</section>
+
+<!-- ================= 4 · CAPITOLO 3.2 — IMPIANTO ELETTRICO ================= -->
+<article class="capitolo salto">
+  <header class="cap-testa"><img src="../logo-unicorn-nero.png" alt="Unicorn"><span>Parte 3 · Cantiere e impianti</span></header>
+  <p class="occhiello">Capitolo 3.2</p>
+  <h1>Impianto elettrico dal contatore alle camere</h1>
+  <div class="cosa-ottieni"><b>Cosa ottieni</b><p>Sai leggere il quadro, sai cosa scatta e perché, e puoi guidare l'ospite al telefono.</p></div>
+
+  <h2>Come funziona</h2>
+  <p>La corrente entra dal contatore. Passa dal quadro elettrico. Dal quadro partono le linee che vanno alle camere. Ogni pezzo protegge qualcosa di diverso.</p>
+
+  <figure class="grafica">
+    <p class="grafica-titolo">La strada della corrente</p>
+    <svg viewBox="0 0 656 252" role="img" aria-label="La corrente attraversa contatore, generale, differenziale e linee di zona fino alle camere; la messa a terra corre separata sotto tutto il flusso">
+      <!-- nodi -->
+      <rect class="dg-nodo" x="0" y="2" width="121" height="112" rx="8"/>
+      <text class="dg-titolo" x="9" y="27">Contatore</text>
+      <text class="dg-testo" x="9" y="66">Stacca se usi</text><text class="dg-testo" x="9" y="82">troppa corrente</text><text class="dg-testo" x="9" y="98">insieme</text>
+
+      <rect class="dg-nodo" x="134" y="2" width="121" height="112" rx="8"/>
+      <text class="dg-titolo" x="143" y="27">Generale</text>
+      <text class="dg-testo" x="143" y="66">Accende e</text><text class="dg-testo" x="143" y="82">spegne tutta</text><text class="dg-testo" x="143" y="98">la casa</text>
+
+      <rect class="dg-nodo-chiave" x="268" y="2" width="121" height="112" rx="8"/>
+      <text class="dg-titolo" x="277" y="27">Differenziale</text>
+      <text class="dg-sotto" x="277" y="43">salvavita</text>
+      <text class="dg-testo" x="277" y="66">Protegge</text><text class="dg-testo" x="277" y="82">le persone</text>
+
+      <rect class="dg-nodo" x="402" y="2" width="121" height="112" rx="8"/>
+      <text class="dg-titolo" x="411" y="27">Linee di zona</text>
+      <text class="dg-sotto" x="411" y="43">magnetotermici</text>
+      <text class="dg-testo" x="411" y="66">Proteggono</text><text class="dg-testo" x="411" y="82">i fili</text>
+
+      <rect class="dg-nodo" x="535" y="2" width="121" height="112" rx="8"/>
+      <text class="dg-titolo" x="544" y="27">Camere</text>
+      <text class="dg-titolo" x="544" y="43">e punti</text>
+      <text class="dg-testo" x="544" y="66">Prese, luci,</text><text class="dg-testo" x="544" y="82">comandi</text>
+
+      <!-- frecce piene 1→2→3→4→5 -->
+      <path class="dg-freccia" d="M122 58H133"/>
+      <path class="dg-freccia" d="M256 58H267"/>
+      <path class="dg-freccia" d="M390 58H401"/>
+      <path class="dg-freccia" d="M524 58H534"/>
+
+      <!-- quattro rami dal nodo 4 al nodo 5 -->
+      <path class="dg-filo" d="M463 114V129M428 129H590M428 129V140M482 129V140M536 129V140M590 129V140"/>
+      <rect class="dg-chip" x="403" y="140" width="50" height="22" rx="5"/><text class="dg-testo dg-centro" x="428" y="155">Luci</text>
+      <rect class="dg-chip" x="457" y="140" width="50" height="22" rx="5"/><text class="dg-testo dg-centro" x="482" y="155">Prese</text>
+      <rect class="dg-chip" x="511" y="140" width="50" height="22" rx="5"/><text class="dg-testo dg-centro" x="536" y="155">Cucina</text>
+      <rect class="dg-chip" x="565" y="140" width="50" height="22" rx="5"/><text class="dg-testo dg-centro" x="590" y="155">Bagno</text>
+      <path class="dg-filo" d="M428 162V174M482 162V174M536 162V174M590 162V174M428 174H628"/>
+      <path class="dg-freccia" d="M628 174V116"/>
+
+      <!-- messa a terra: giallo-verde, tratteggiata, sotto tutto il flusso -->
+      <path class="dg-terra-giallo" d="M646 114V214H60V228"/>
+      <path class="dg-terra-verde" d="M646 114V214H60V228"/>
+      <text class="dg-testo" x="96" y="205">Messa a terra: filo giallo-verde, sicurezza</text>
+      <path class="dg-terra-simbolo" d="M42 230H78M50 237H70M57 244H63"/>
+    </svg>
+    <div class="legenda-fili">
+      <div><i class="filo-fase"></i><span><strong>Fase:</strong> marrone, nero o grigio — porta la corrente</span></div>
+      <div><i class="filo-neutro"></i><span><strong>Neutro:</strong> blu — la riporta indietro</span></div>
+      <div><i class="filo-terra"></i><span><strong>Terra:</strong> giallo-verde — è la sicurezza</span></div>
+    </div>
+    <p class="nota-tecnica">Dal contatore arrivano cavi da 6 mm², per le luci di solito 1,5 mm², per le prese 2,5 mm².</p>
+  </figure>
+
+  <h2 class="salto">Passi</h2>
+  <div class="passi-con-foto">
+    <ol class="passi">
+      <li><strong>Trova il contatore.</strong> Stacca se in casa si usa troppa corrente tutta insieme.</li>
+      <li><strong>Apri il quadro.</strong> Il primo interruttore a sinistra è il generale. Spegne tutta la casa.</li>
+      <li><strong>Trova i differenziali.</strong> Sono i salvavita. Hanno il tasto «T».</li>
+      <li><strong>Premi il tasto «T».</strong> Il salvavita deve staccare. Se non stacca, chiama l'elettricista.</li>
+      <li><strong>Leggi le zone.</strong> Una levetta per zona: luci, prese, cucina, bagno.</li>
+      <li><strong>Etichetta ogni levetta.</strong> Servono circa 10 minuti con un'etichettatrice.</li>
+      <li><strong>Fotografa il quadro.</strong> Metti la foto nel manuale della casa. La mandi all'ospite se chiama al buio.</li>
+      <li><strong>Controlla la messa a terra presa per presa.</strong> Usa un rilevatore. Una presa senza terra: elettricista, dichiarazione di conformità, niente ospiti finché non è risolto.</li>
+    </ol>
+    <figure class="foto">
+      <img src="foto-segnaposto.svg" width="969" height="770" alt="Quadro elettrico reale con generale e tre differenziali">
+      <figcaption>Un quadro vero: il generale a sinistra, poi i differenziali, poi le levette di zona.</figcaption>
+    </figure>
+  </div>
+
+  <aside class="box box-errore">
+    <b>Errore comune</b>
+    <p><strong>Fidarsi della presa.</strong> Il foro centrale o le due lamelle laterali non provano che la terra ci sia. Vederli non basta. La terra si controlla con un rilevatore, presa per presa.</p>
+    <blockquote>«Però se verificate che in qualche presa ci sono dei problemi il mio consiglio è quello: fermatevi, chiamate l'elettricista.»</blockquote>
+  </aside>
+</article>
+
+<!-- ================= 5 · CAPITOLO 4.1 — PERCORSO DELL'OSPITE ================= -->
+<article class="capitolo salto">
+  <header class="cap-testa"><img src="../logo-unicorn-nero.png" alt="Unicorn"><span>Parte 4 · Gestione operativa</span></header>
+  <p class="occhiello">Capitolo 4.1</p>
+  <h1>Il percorso dell'ospite, dalla prenotazione alla recensione</h1>
+  <div class="cosa-ottieni"><b>Cosa ottieni</b><p>Sai cosa vuole l'ospite in ogni tappa e cosa fai tu.</p></div>
+
+  <section class="perche">
+    <h2>Perché conta</h2>
+    <p>La recensione decide il business. Circa il 90% degli ospiti sceglie in base alle recensioni. Un paio di recensioni prese male possono mettere in crisi un business plan.</p>
+  </section>
+  <blockquote class="citazione">«Il viaggio dell'ospite va progettato tappa per tappa.»</blockquote>
+
+  <figure class="grafica">
+    <p class="grafica-titolo">Sette tappe</p>
+    <svg viewBox="0 0 640 286" role="img" aria-label="Sette tappe dalla prenotazione alla recensione; il turnover del team chiude il ciclo verso la prima tappa; punti critici: ingresso, primo problema non risolto, partenza">
+      <!-- riga 1: tappe 1-4 -->
+      <rect class="dg-nodo" x="18" y="4" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="36" cy="22" r="11"/><text class="dg-num" x="36" y="26.5">1</text>
+      <text class="dg-titolo" x="28" y="50">Annuncio e</text><text class="dg-titolo" x="28" y="66">prenotazione</text>
+
+      <rect class="dg-nodo" x="178" y="4" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="196" cy="22" r="11"/><text class="dg-num" x="196" y="26.5">2</text>
+      <text class="dg-titolo" x="188" y="58">Conferma</text>
+
+      <rect class="dg-nodo" x="338" y="4" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="356" cy="22" r="11"/><text class="dg-num" x="356" y="26.5">3</text>
+      <text class="dg-titolo" x="348" y="58">Pre-arrivo</text>
+
+      <rect class="dg-nodo-chiave" x="498" y="4" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="516" cy="22" r="11"/><text class="dg-num" x="516" y="26.5">4</text>
+      <text class="dg-titolo" x="508" y="58">Ingresso</text>
+      <circle class="dg-critico" cx="622" cy="20" r="6"/>
+
+      <!-- riga 2: tappe 5-7, da destra a sinistra -->
+      <rect class="dg-nodo-chiave" x="498" y="108" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="516" cy="126" r="11"/><text class="dg-num" x="516" y="130.5">5</text>
+      <text class="dg-titolo" x="508" y="162">Soggiorno</text>
+      <circle class="dg-critico" cx="622" cy="124" r="6"/>
+
+      <rect class="dg-nodo-chiave" x="338" y="108" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="356" cy="126" r="11"/><text class="dg-num" x="356" y="130.5">6</text>
+      <text class="dg-titolo" x="348" y="162">Checkout</text>
+      <circle class="dg-critico" cx="462" cy="124" r="6"/>
+
+      <rect class="dg-nodo" x="178" y="108" width="140" height="70" rx="8"/>
+      <circle class="dg-cerchio" cx="196" cy="126" r="11"/><text class="dg-num" x="196" y="130.5">7</text>
+      <text class="dg-titolo" x="188" y="154">Recensione</text><text class="dg-titolo" x="188" y="170">e ritorno</text>
+
+      <!-- frecce piene tra le tappe -->
+      <path class="dg-freccia" d="M159 39H177"/>
+      <path class="dg-freccia" d="M319 39H337"/>
+      <path class="dg-freccia" d="M479 39H497"/>
+      <path class="dg-freccia" d="M568 75V107"/>
+      <path class="dg-freccia" d="M497 143H479"/>
+      <path class="dg-freccia" d="M337 143H319"/>
+
+      <!-- legenda punti critici -->
+      <text class="dg-testo dg-ambra" x="18" y="124">Punti critici</text>
+      <circle class="dg-critico" cx="24" cy="141" r="5"/><text class="dg-testo" x="36" y="145">Ingresso</text>
+      <circle class="dg-critico" cx="24" cy="160" r="5"/><text class="dg-testo" x="36" y="164">Primo problema</text><text class="dg-testo" x="36" y="179">non risolto</text>
+      <circle class="dg-critico" cx="24" cy="197" r="5"/><text class="dg-testo" x="36" y="201">Partenza</text>
+
+      <!-- turnover del team: collegato alla tappa 6, richiude il ciclo verso la tappa 1 -->
+      <rect class="dg-fascia" x="18" y="226" width="620" height="54" rx="8"/>
+      <text class="dg-fascia-testo dg-titolo" x="34" y="248">Turnover del team</text>
+      <text class="dg-fascia-testo" x="34" y="268" style="font-size:12px !important">Pulizia il giorno stesso del checkout, controllo danni e scorte.</text>
+      <path class="dg-freccia" d="M408 179V225"/>
+      <path class="dg-freccia" d="M18 253H6V39H17"/>
+    </svg>
+  </figure>
+
+  <h2>Cosa succede in ogni tappa</h2>
+  <table class="tabella-tappe">
+    <colgroup><col style="width:38mm"><col style="width:42mm"><col style="width:98mm"></colgroup>
+    <thead><tr><th>Tappa</th><th>L'ospite vuole</th><th>Tu fai</th></tr></thead>
+    <tbody>
+      <tr><td><div class="tappa"><span class="tappa-num">1</span><span class="tappa-nome">Annuncio e prenotazione</span></div></td><td>Capire cosa trova e prenotare.</td><td><p>Foto fedeli, dotazioni vere, prezzo giusto per la stagione.</p><div class="extra"><p>Il calendario è sincronizzato, così non ci sono doppie prenotazioni.</p></div></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">2</span><span class="tappa-nome">Conferma</span></div></td><td>Sapere che è tutto a posto.</td><td><p>Email di conferma automatica. «Confermato sul sito» non basta.</p></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">3</span><span class="tappa-nome">Pre-arrivo</span></div></td><td>Sapere dove andare e come entrare.</td><td><p>Chiedi documenti e check-in online. Mandi indirizzo, parcheggio, manuale della casa.</p><div class="extra"><p>Dove non c'è segnale, mandi Wi-Fi e password prima dell'arrivo.</p></div></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">4</span><span class="tappa-nome">Ingresso<span class="punto-critico"></span></span></div></td><td>Entrare senza ostacoli.</td><td><p>Identifichi l'ospite prima di mandare il codice. Il codice parte solo a pre-arrivo completo.</p><div class="extra"><p>Il check-in è il momento cardine.</p></div></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">5</span><span class="tappa-nome">Soggiorno<span class="punto-critico"></span></span></div></td><td>Una casa che funziona.</td><td><p>Mantieni ciò che hai promesso. Il primo problema lo risolvi subito. La casa deve essere autonoma, con scorte e istruzioni.</p></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">6</span><span class="tappa-nome">Checkout<span class="punto-critico"></span></span></div></td><td>Uscire senza pensieri.</td><td><p>La sera prima chiedi com'è andata e mandi le regole di uscita. Se c'è un problema, lo risolvi prima che parta.</p><div class="extra"><p>Il checkout conta più del check-in.</p></div></td></tr>
+      <tr><td><div class="tappa"><span class="tappa-num">7</span><span class="tappa-nome">Recensione e ritorno</span></div></td><td>Essere ascoltato.</td><td><p>Chiedi la recensione solo se l'ospite si è detto soddisfatto. Se esita, telefoni e chiedi cosa migliorare. Rispondi sempre in modo costruttivo.</p><div class="extra"><p>Offri un buono sconto con codice per il ritorno diretto.</p></div></td></tr>
+    </tbody>
+  </table>
+  <p class="tabella-nota"><span class="punto-critico" style="margin:0 1.5mm 0 0"></span>Punto critico della giornata dell'ospite.</p>
+
+  <blockquote class="citazione">«Io dico sempre che il checkout è più importante del checkin perché se è andato male qualcosa durante il soggiorno lo devo risolvere al checkout prima che vada via.»</blockquote>
+</article>
+
+<!-- ================= 6 · CAPITOLO 3.1 — CHECKLIST + DAL CAMPO ================= -->
+<article class="capitolo salto">
+  <header class="cap-testa"><img src="../logo-unicorn-nero.png" alt="Unicorn"><span>Parte 3 · Cantiere e impianti</span></header>
+  <p class="occhiello">Capitolo 3.1</p>
+  <h1>Sopralluogo: le 10 cose da guardare</h1>
+  <div class="cosa-ottieni"><b>Cosa ottieni</b><p>Una lista da stampare e portare con te. Dieci minuti per voce, non per tutta la casa.</p></div>
+  <div class="promemoria"><p><b>Prima di entrare:</b> foto di tutto. Fai anche un video unico: parti dal portoncino d'ingresso, poi entri in ogni stanza.</p></div>
+
+  <section class="checklist">
+    <table>
+      <colgroup><col style="width:12mm"><col style="width:33mm"><col style="width:57mm"><col style="width:43mm"><col style="width:33mm"></colgroup>
+      <thead>
+        <tr class="campi"><th colspan="5"><div class="checklist-campi"><span>Indirizzo</span><i></i><span>Data</span><i></i><span>Con chi</span><i></i></div></th></tr>
+        <tr><th></th><th>Cosa guardi</th><th>Cosa cerchi</th><th>Se non va</th><th class="c-note">Note</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">1</span></td><td class="c-voce">Documenti</td><td>Conformità degli impianti, agibilità, libretto caldaia, APE, regolamento condominiale</td><td>Chiedili al proprietario. Senza conformità serve una dichiarazione di rispondenza</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">2</span></td><td class="c-voce">Quadro elettrico</td><td>Salvavita con tasto «T» che stacca. Levette con etichetta</td><td>Elettricista. Etichetta tutto e fotografa</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">3</span></td><td class="c-voce">Messa a terra</td><td>Rilevatore in ogni presa: spie fase, neutro, terra</td><td>Una sola presa senza terra: elettricista, niente ospiti</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">4</span></td><td class="c-voce">Sotto il lavello e in bagno</td><td>Flessibili usurati, pianale gonfio, silicone e fughe anneriti</td><td>Flessibile in inox di qualità. Pianale gonfio: chiedi se c'è stata una perdita</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">5</span></td><td class="c-voce">Acqua e scarichi</td><td>Valvole d'arresto sotto i sanitari. Apri i rubinetti e tira lo sciacquone: scarico lento o gorgoglio</td><td>Valvole su ogni punto acqua. Idraulico</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">6</span></td><td class="c-voce">Caldaia e riscaldamento</td><td>Conta i tubi sotto: 3 = solo riscaldamento, 5 = anche acqua calda. Contacalorie sui termosifoni = riscaldamento centralizzato</td><td>Con 4 tubi: foto e libretto, poi chiedi al tecnico</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">7</span></td><td class="c-voce">Muri e soffitti</td><td>Macchie sopra il battiscopa, aloni sul soffitto, muffa negli angoli</td><td>Cerca la fonte prima di tinteggiare. Dipingere sopra il problema lo fa tornare</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">8</span></td><td class="c-voce">Finestre e tapparelle</td><td>Test dell'accendino: 2 riflessi = vetro singolo, 4 = doppio, 6 = triplo. Tapparelle su e giù, cinghie, cassonetto</td><td>Proponi al proprietario la sostituzione o il vetrocamera</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">9</span></td><td class="c-voce">Condizionatore e accesso</td><td>Dove va la condensa (mai una tanica). Quante porte da aprire: portone e porta di casa. Pulsante apriporta, Wi-Fi, permesso del condominio</td><td>Scarico canalizzato. Piano B per ogni porta</td><td class="c-note"></td></tr>
+        <tr><td class="c-spunta"><span class="casella"></span><span class="c-num">10</span></td><td class="c-voce">Sicurezza</td><td>Rilevatore di gas e di monossido dove c'è combustione, estintore visibile, altezza dei parapetti dei balconi</td><td>Sono obbligatori: verifica la norma locale</td><td class="c-note"></td></tr>
+      </tbody>
+    </table>
+    <div class="chiusura-checklist">
+      <p class="tabella-nota"><strong>Se qualcosa non torna, fermati e chiama il tecnico. Non decidere da solo.</strong></p>
+      <div class="spunte-finali">Foto fatte <span class="casella"></span> Video fatto <span class="casella"></span></div>
+    </div>
+  </section>
+
+  <aside class="box box-campo">
+    <b>Dal campo</b>
+    <blockquote>«E grazie al video naturalmente cos'è che abbiamo fatto? Siamo riusciti ad intervenire localmente, abbiamo rimosso una piastrella, abbiamo sistemato quel raccordo che era sicuramente saldato male e abbiamo ripristinato il tutto. Ma questo ci è costato mezza giornata di lavoro. Ma se non avessi avuto il video magari vallo a trovare.»</blockquote>
+    <p><strong>Il caso, in breve.</strong> Palazzina di 18 appartamenti a Rimini. Dopo la ristrutturazione, un'inquilina del secondo piano chiama: soffitto bagnato. Sopra c'è un bagno. Il video girato prima di chiudere il massetto ha mostrato un raccordo messo male sul tubo. Senza video si rischiava di demolire il bagno.</p>
+    <p><strong>Cosa impari:</strong> prima di coprire gli impianti, filma. Un video unico, con un senso, non un video per stanza.</p>
+  </aside>
+</article>
+
+<!-- ================= 7 · CAPITOLO 4.5 — KROSS BOOKING ================= -->
+<article class="capitolo salto">
+  <header class="cap-testa"><img src="../logo-unicorn-nero.png" alt="Unicorn"><span>Parte 4 · Gestione operativa</span></header>
+  <p class="occhiello">Capitolo 4.5</p>
+  <h1>Kross Booking:<br>cosa fa e come organizzarsi</h1>
+  <div class="cosa-ottieni"><b>Cosa ottieni</b><p>Sai a cosa serve ogni parte del gestionale e quando guardarla.</p></div>
+
+  <h2>Cosa fa</h2>
+  <p>Kross Booking è un gestionale per affitti brevi. Tiene insieme in un posto solo prenotazioni, ospiti, prezzi, messaggi e adempimenti.</p>
+  <p>Si divide in quattro parti. Ognuna ha un compito.</p>
+
+  <figure class="grafica">
+    <p class="grafica-titolo">Le quattro componenti</p>
+    <svg viewBox="0 0 640 372" role="img" aria-label="L'ospite prenota dal Booking Engine; i portali dialogano con il Channel Manager; Booking Engine e Channel Manager alimentano il PMS, che passa al Guest Portal e da lì torna all'ospite">
+      <rect class="dg-cornice" x="130" y="6" width="380" height="360" rx="10"/>
+      <text class="dg-viola" x="146" y="28" style="font-size:13px">Kross Booking</text>
+
+      <rect class="dg-nodo" x="0" y="58" width="92" height="50" rx="8"/>
+      <text class="dg-titolo dg-centro" x="46" y="88">Ospite</text>
+
+      <rect class="dg-nodo" x="150" y="44" width="160" height="78" rx="8"/>
+      <text class="dg-titolo" x="162" y="70">Booking Engine</text>
+      <text class="dg-testo" x="162" y="92">Prenotazione</text><text class="dg-testo" x="162" y="108">sul tuo sito</text>
+
+      <rect class="dg-nodo" x="330" y="44" width="160" height="78" rx="8"/>
+      <text class="dg-titolo" x="342" y="70">Channel Manager</text>
+      <text class="dg-testo" x="342" y="92">Collega</text><text class="dg-testo" x="342" y="108">i portali</text>
+
+      <rect class="dg-nodo-chiave" x="200" y="170" width="240" height="78" rx="8"/>
+      <text class="dg-titolo" x="214" y="196">PMS</text>
+      <text class="dg-testo" x="214" y="218">Il cuore</text><text class="dg-testo" x="214" y="234">operativo</text>
+
+      <rect class="dg-nodo" x="220" y="282" width="200" height="70" rx="8"/>
+      <text class="dg-titolo" x="234" y="308">Guest Portal</text>
+      <text class="dg-testo" x="234" y="328">La pagina</text><text class="dg-testo" x="234" y="344">dell'ospite</text>
+
+      <rect class="dg-nodo" x="548" y="44" width="92" height="78" rx="8"/>
+      <text class="dg-titolo dg-centro" x="594" y="70">Portali</text>
+      <text class="dg-testo dg-centro" x="594" y="92">Airbnb</text><text class="dg-testo dg-centro" x="594" y="108">Booking</text>
+
+      <path class="dg-freccia" d="M93 83H149"/>
+      <path class="dg-freccia dg-freccia-doppia" d="M491 83H547"/>
+      <path class="dg-freccia" d="M230 123V169"/>
+      <path class="dg-freccia" d="M410 123V169"/>
+      <path class="dg-freccia" d="M320 249V281"/>
+      <path class="dg-freccia" d="M219 317H46V110"/>
+    </svg>
+  </figure>
+
+  <table class="tabella">
+    <colgroup><col style="width:40mm"><col style="width:50mm"><col style="width:88mm"></colgroup>
+    <thead><tr><th>Componente</th><th>A cosa serve</th><th>Cosa ci trovi</th></tr></thead>
+    <tbody>
+      <tr><td><strong>PMS</strong></td><td>Il cuore operativo</td><td>Planner, ospiti, documenti, adempimenti, pulizie, messaggi</td></tr>
+      <tr><td><strong>Channel Manager</strong></td><td>Collega i portali</td><td>Prenotazioni, disponibilità, prezzi e chiusure dei canali</td></tr>
+      <tr><td><strong>Booking Engine</strong></td><td>Prenotazione sul tuo sito</td><td>L'ospite prenota e paga da solo, anche se non ci sei</td></tr>
+      <tr><td><strong>Guest Portal</strong></td><td>La pagina dell'ospite</td><td>Check-in online, manuale della casa, servizi extra</td></tr>
+    </tbody>
+  </table>
+  <p>Un quinto modulo, <strong>Vacation Rental</strong>, serve al rendiconto dei proprietari quando fai property management.</p>
+  <blockquote class="citazione">«Il Channel Manager è lo strumento che ti permette di essere ovunque, ma tu controlli tutto da lì.»</blockquote>
+
+  <h2>Come organizzarti</h2>
+  <p><strong>All'inizio, una volta sola.</strong> Inserisci la casa. Collega i canali. Scrivi i modelli di messaggio. Imposta gli adempimenti.</p>
+  <p><strong>Poi, a ritmo regolare.</strong> Il gestionale fa i lavori ripetitivi. Tu controlli le eccezioni.</p>
+
+  <h3>Tre regole</h3>
+  <ol class="regole">
+    <li><span>Non mandare il codice d'accesso prima che i documenti siano controllati.</span></li>
+    <li><span>Le comunicazioni importanti vanno nella chat della piattaforma o via email. WhatsApp va bene per il quotidiano.</span></li>
+    <li><span>Tieni i tre stati distinti: documento caricato, documento controllato, ospite entrato.</span></li>
+  </ol>
+  <p>Un solo immobile? Si consiglia di usarlo già da subito: è più semplice impararlo su una casa e raccogliere dati e storico in un posto solo.</p>
+
+  <h2>Routine</h2>
+  <table class="tabella">
+    <colgroup><col style="width:34mm"><col style="width:144mm"></colgroup>
+    <thead><tr><th>Quando</th><th>Cosa controlli</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ogni giorno</strong></td><td>Nuove prenotazioni · Arrivi e partenze del giorno · Documenti da controllare · Messaggi degli ospiti · Pulizie</td></tr>
+      <tr><td><strong>Ogni settimana</strong></td><td>Tariffe e disponibilità dei prossimi giorni · Inviti al check-in online (circa 7 giorni prima dell'arrivo) · Scorte e piccole manutenzioni · Sincronizzazione dei canali</td></tr>
+      <tr><td><strong>Ogni mese</strong></td><td>Incassi e tassa di soggiorno · Report statistico secondo la cadenza richiesta · Punteggio delle recensioni · Rendiconto al proprietario, se fai property management</td></tr>
+    </tbody>
+  </table>
+  <p class="tabella-nota">Nota: la cadenza è una proposta di lavoro. Si adatta al numero di case e ai tuoi tempi.</p>
+</article>
+
+</body>
+</html>
